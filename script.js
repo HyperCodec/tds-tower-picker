@@ -57,7 +57,8 @@ const golden = [
     "crook boss",
     "pyro",
     "cowboy",
-    "minigunner"
+    "minigunner",
+    "pyromancer"
 ]
 
 // code
