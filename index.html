@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>TDS Tower Picker</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+</head>
+
+<body class="centered">
+    <h1>TDS Tower Picker</h1>
+    
+    <div class="inlined bordered">
+        <input type="checkbox" id="starterTowers" checked>
+        <label for="starterTowers" class="hoverable">Starter towers</label>
+        <br>
+        <input type="checkbox" id="intermediateTowers" checked>
+        <label for="intermediateTowers" class="hoverable">Intermediate towers</label>
+        <br>
+        <input type="checkbox" id="advancedTowers" checked>
+        <label for="advancedTowers" class="hoverable">Advanced towers</label>
+        <br>
+        <input type="checkbox" id="hardcoreTowers" checked>
+        <label for="hardcoreTowers" class="hoverable">Hardcore towers</label>
+        <br>
+        <input type="checkbox" id="exclusiveTowers" checked>
+        <label for="exclusiveTowers" class="hoverable">Exclusive towers</label>
+        <br>
+        <input type="checkbox" id="goldenTowers" checked>
+        <label for="goldenTowers" class="hoverable">Golden towers</label>
+    </div>
+    <br><br>
+    <button onclick="genLoadout();" class="hoverable">Generate loadout</button>
+    <br><br>
+    <div id="replaceTowerContainer" class="hidden">
+        <label for="changeSlot">
+            Slot: <input type="number" id="changeSlot" min=1 max=5 onchange="displayLoadout(document.getElementById('changeSlot').value - 1)">
+        </label>
+        <button onclick="replaceTower(document.getElementById('changeSlot').value - 1);" class="hoverable" id="changeSlotBtn">Replace Tower</button>
+    </div>
+    <br>
+    <div id="loadout" class="multiline bordered hidden inlined"/>
+</body>
+
+</html>

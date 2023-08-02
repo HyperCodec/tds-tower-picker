@@ -1,0 +1,69 @@
+.multiline {
+    white-space: pre-wrap
+}
+
+.hidden {
+    visibility: hidden
+}
+
+.bordered {
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    
+    border-top-color: #4A4A4A;
+    border-left-color: #4A4A4A;
+    border-right-color: black;
+    border-bottom-color: black;
+    
+
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+}
+
+.inlined {
+    display: inline-block;
+}
+
+.centered {
+    float: center;
+    text-align: center;
+}
+
+button {
+    background: none;
+}
+
+input {
+    background: none;
+}
+
+.hoverable:hover {
+    color: white;
+}
+
+body {
+    background: linear-gradient(270deg, #7029ff, #29a8ff);
+    background-size: 400% 400%;
+
+    -webkit-animation: background 34s ease infinite;
+    -moz-animation: background 34s ease infinite;
+    animation: background 34s ease infinite;
+}
+
+@-webkit-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
