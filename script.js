@@ -155,18 +155,26 @@ function getTowerPool() {
 
 // util
 function randChoice(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
+    return arr[randIndex(arr)];
+}
+
+function randIndex(arr) {
+    return Math.floor(Math.random() * arr.length);
 }
 
 function chooseUntilNew(arr, used, first = false) {
+    const export_arr = arr.slice();
+    
     if(first) {
         used = used.map(t => t.split(' ')[0]);
         arr = arr.map(t => t.split(' ')[0]);
     }
     
     while(true) {
-        const choice = randChoice(arr);
+        const i = randIndex(arr);
+        const choice1 = arr[i];
+        const finalChoice = export_arr[i];
 
-        if(!used.includes(choice)) return choice;
+        if(!used.includes(choice1)) return finalChoice;
     }
 }
