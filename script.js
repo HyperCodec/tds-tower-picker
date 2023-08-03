@@ -117,7 +117,7 @@ function replaceTower(i) {
 }
 
 function getTower(pool) {
-    const tower = chooseUntilNew(pool, currentLoadout, true);
+    const tower = chooseUntilNew(pool, currentLoadout);
 
     if(golden.includes(tower) && document.getElementById("goldenTowers").checked) {
         if(Math.random() >= 0.5) return tower + " (golden)";
@@ -162,13 +162,11 @@ function randIndex(arr) {
     return Math.floor(Math.random() * arr.length);
 }
 
-function chooseUntilNew(arr, used, first = false) {
+function chooseUntilNew(arr, used) {
     const export_arr = arr.slice();
     
-    if(first) {
-        used = used.map(t => t.split(' ')[0]);
-        arr = arr.map(t => t.split(' ')[0]);
-    }
+    used = used.map(t => t.split(' ')[0]);
+    arr = arr.map(t => t.split(' ')[0]);
     
     while(true) {
         const i = randIndex(arr);
