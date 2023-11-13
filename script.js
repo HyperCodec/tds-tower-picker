@@ -48,7 +48,9 @@ const exclusiveTowers = [
     "toxic gunner",
     "sledger",
     "executioner",
-    "elf camp"
+    "elf camp",
+    "necromancer",
+    "jester"
 ]
 
 const golden = [
