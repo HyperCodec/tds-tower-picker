@@ -14,6 +14,7 @@ const intermediateTowers = [
     "ace pilot",
     "farm",
     "militant",
+    "trapper",
     "pyromancer",
     "military base",
     "shotgunner",
