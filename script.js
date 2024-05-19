@@ -35,6 +35,7 @@ const advancedTowers = [
 ]
 
 const hardcoreTowers = [
+    "brawler",
     "accelerator",
     "engineer"
 ]
