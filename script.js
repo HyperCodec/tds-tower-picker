@@ -26,6 +26,7 @@ const advancedTowers = [
     "mortar",
     "turret",
     "pursuit",
+    "mercenary base",
     "electroshocker",
     "commander",
     "dj booth",
